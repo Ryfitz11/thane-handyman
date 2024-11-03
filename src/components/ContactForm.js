@@ -1,6 +1,7 @@
 import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
+import './ContactForm.css';
 
 const ContactForm = () => {
    const validationSchema = Yup.object({
@@ -36,7 +37,7 @@ const handleSubmit = async (values, actions) => {
          onSubmit={handleSubmit}
       >
          {() => (
-            <Form className="container p-4 border rounded">
+            <Form className="contact-form container p-4 border rounded">
                <div className="mb-3">
                   <label htmlFor="name">Name</label>
                   <Field name="name" type="text" className="form-control" />
